@@ -1,0 +1,23 @@
+!!! 5
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => 'en' }
+  <!--<![endif]-->
+  %head
+    %meta{ :charset => 'utf-8' }/
+    %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }/
+
+    %title Made in Amsterd.am
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }/
+
+    = stylesheet_link_tag 'all'
+    = javascript_include_tag 'all'
+    = favicon_tag 'favicon.png'
+
+  %body
+
+    // content here
+
+    %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' }
