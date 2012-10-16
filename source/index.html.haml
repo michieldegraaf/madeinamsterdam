@@ -1,23 +1,159 @@
 !!! 5
-<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if lt IE 7]> <html lang='en' class='no-js ie6' } <![endif]-->
+<!--[if IE 7]>    <html lang='en' class='no-js ie7' } <![endif]-->
+<!--[if IE 8]>    <html lang='en' class='no-js ie8' } <![endif]-->
 <!--[if gt IE 8]><!-->
 %html.no-js{ :lang => 'en' }
   <!--<![endif]-->
   %head
     %meta{ :charset => 'utf-8' }/
     %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }/
-
-    %title Made in Amsterd.am
+    %title Made in Amsterdam
     %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }/
+    %meta{ :name => 'description', :content => 'Made in Amsterdam. A list of tech companies crafting products in Amsterdam.' }/
+    %meta{ :name => 'keywords', :content => 'Made in Amsterdam, amsterdam, tech, technology, products' }/
 
     = stylesheet_link_tag 'all'
     = javascript_include_tag 'all'
     = favicon_tag 'favicon.png'
+    %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' }
 
   %body
 
-    // content here
+    %header{:role => 'banner' }
+      .container
+        %a.logo{:href => '#' }
+        %em
+          Est. 2012
+        %h1
+          Made in Amsterdam
 
-    %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' }
+    %section.content{:role => 'main' }
+      .info
+        %h2
+          A list of tech companies crafting products in Amsterdam.
+        %a.textlink{:href => '' }
+          Join the list
+
+      .container
+        %ol#company-list
+          %li
+            %a{ :href => 'http://www.12active.com' }
+              12Active
+          %li
+            %a{ :href => 'http://22tracks.com' }
+              22tracks
+          %li
+            %a{ :href => 'http://www.adgibbon.co' }
+              AdGibbon
+          %li
+            %a{ :href => 'http://bottlenose.com' }
+              Bottlenose
+          %li
+            %a{ :href => 'http://www.earlydoc.com' }
+              Earlydoc
+          %li
+            %a{ :href => 'http://www.ebuddy.com' }
+              eBuddy
+          %li
+            %a{ :href => 'http://www.efaqt.com' }
+              Efaqt
+          %li
+            %a{ :href => 'http://favour.it' }
+              favour.it
+          %li
+            %a{ :href => 'https://fray.it' }
+              Frayit
+          %li
+            %a{ :href => 'https://gratisprint.nl' }
+              GratisPrint.nl
+          %li
+            %a{ :href => 'http://www.hyves.nl' }
+              Hyves
+          %li
+            %a{ :href => 'http://www.imbull.com' }
+              Imbull
+          %li
+            %a{ :href => 'http://www.layar.com' }
+              Layar
+          %li
+            %a{ :href => 'http://www.mobypicture.com' }
+              Mobypicture
+          %li
+            %a{ :href => 'http://www.olery.com' }
+              Olery
+          %li
+            %a{ :href => 'http://www.mollie.nl' }
+              Mollie
+          %li
+            %a{ :href => 'http://app.partywithalocal.com' }
+              Party with a Local
+          %li
+            %a{ :href => 'http://paydro.net' }
+              Paydro
+          %li
+            %a{ :href => 'http://www.peecho.com' }
+              Peecho
+          %li
+            %a{ :href => 'http://www.perspagina.nl' }
+              PersPagina
+          %li
+            %a{ :href => 'http://pressdoc.com' }
+              Pressdoc
+          %li
+            %a{ :href => 'http://readmo.re' }
+              Readmore
+          %li
+            %a{ :href => 'http://www.sellanapp.com' }
+              SellanApp
+          %li
+            %a{ :href => 'http://www.silkapp.com' }
+              Silk
+          %li
+            %a{ :href => 'http://skylin.es' }
+              Skylin.es
+          %li
+            %a{ :href => 'http://slideshots.com' }
+              Slideshots
+          %li
+            %a{ :href => 'http://www.socialintern.com' }
+              Social Intern
+          %li
+            %a{ :href => 'http://www.springest.nl' }
+              Springest
+          %li
+            %a{ :href => 'http://studenttutors.nl' }
+              StudentTutors
+          %li
+            %a{ :href => 'http://www.studyflow.nl' }
+              StudyFlow
+          %li
+            %a{ :href => 'http://www.studytube.nl' }
+              StudyTube
+          %li
+            %a{ :href => 'http://www.stuvia.nl' }
+              Stuvia
+          %li
+            %a{ :href => 'http://twittercounter.com' }
+              Twittercounter
+          %li
+            %a{ :href => 'http://usabilla.com' }
+              Usabilla
+          %li
+            %a{ :href => 'http://wakoopa.com' }
+              Wakoopa
+          %li
+            %a{ :href => 'http://wappzapp.tv' }
+              wappZapp
+          %li
+            %a{ :href => 'https://www.wetransfer.com' }
+              Wetransfer
+          %li
+            %a{ :href => 'http://zeker.com' }
+              Zeker.com
+
+    %footer
+      %a{ :href => '#' }
+        %img{ :src => 'images/logo-small-black.png' }
+      %p
+        Made with love in Amsterdam
