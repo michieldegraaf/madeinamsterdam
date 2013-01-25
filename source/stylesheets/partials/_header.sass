@@ -4,4 +4,43 @@
 header[role="banner"]
   padding: 80px 0
   color: #fff
-  background: $grey
+  text-align: center
+  background-color: $grey
+  // +at2x(bg-pattern-head-black, 100px, 100px)
+  background-repeat: repeat
+  background-position: center top
+
+  a
+    color: #fff
+
+  .logo
+    display: inline-block
+
+    img
+      display: none
+
+    strong
+      padding-top: 100px
+      +brandon-wide
+      font-size: $f13
+
+  hr
+    display: block
+    width: 100px
+    height: 2px
+    margin: 20px auto 0 auto
+    background: rgba(255,255,255,.1)
+    +box-shadow(0 1px 3px rgba(0,0,0,.2))
+
+  nav[role="navigation"]
+    overflow: hidden
+    display: block
+    text-align: center
+
+    li
+      display: inline-block
+      margin: 0 10px
+      +brandon
+      font-size: $f18
+      font-weight: 600
+      text-shadow: 0 1px 2px rgba(0,0,0,.2)
