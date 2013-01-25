@@ -1,3 +1,3 @@
 # Made in Amsterdam
 
-Run "bundle exec middleman server" to boot local dev server.
+Middleman starts standing watch on port 4567 after running "bundle exec middleman server".
