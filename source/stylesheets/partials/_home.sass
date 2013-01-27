@@ -1,1 +1,30 @@
-/* Home */
+/* =Home
+ ************************************************/
+
+#company-list
+  overflow: hidden
+  border-left: 1px solid #ddd
+
+  li
+    display: block
+    float: left
+    width: 25%
+
+    a
+      display: block
+      border-bottom: 1px solid #ddd
+      border-right: 1px solid #ddd
+
+      &:hover
+        img
+          +opacity(1)
+
+      img
+        display: block
+        width: 100%
+        height: auto
+        +opacity(.8)
+        +transition(opacity, .25s)
+
+      h2
+        display: none

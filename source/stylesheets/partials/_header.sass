@@ -2,11 +2,11 @@
  ************************************************/
 
 header[role="banner"]
-  padding: 80px 0
+  padding: 50px 0
   color: #fff
   text-align: center
   background-color: $grey
-  // +at2x(bg-pattern-head-black, 100px, 100px)
+  +at2x(bg-pattern-ribbon, 200px, 200px)
   background-repeat: repeat
   background-position: center top
 
@@ -14,15 +14,17 @@ header[role="banner"]
     color: #fff
 
   .logo
+    padding-top: 104px
     display: inline-block
+    +at2x(logo-mams, 74px, 84px)
+    background-position: center top
 
     img
       display: none
 
     strong
-      padding-top: 100px
-      +brandon-wide
-      font-size: $f13
+      +futura-wide
+      font-size: $f12
 
   hr
     display: block
@@ -35,12 +37,24 @@ header[role="banner"]
   nav[role="navigation"]
     overflow: hidden
     display: block
+    margin-top: 20px
     text-align: center
 
     li
       display: inline-block
       margin: 0 10px
-      +brandon
-      font-size: $f18
-      font-weight: 600
+      +futura
+      font-size: $f17
+      font-weight: 500
       text-shadow: 0 1px 2px rgba(0,0,0,.2)
+
+      a
+        color: #999
+        text-shadow: 0 1px 3px rgba(0,0,0,.3)
+
+        &:hover
+          color: #fff
+
+      &.active
+        a
+          color: #fff
