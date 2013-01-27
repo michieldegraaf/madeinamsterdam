@@ -1,24 +1,33 @@
 !!! 5
-%html{ :lang => 'en' }
+%html{ :lang => "en" }
   %head
     %title Made in Amsterdam
-    %meta{ :charset => 'utf-8' }/
-    %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }/
+    %meta{ :charset => "utf-8" }/
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
     %meta{ :name => "viewport", :content => "width=device-width, minimum-scale=1.0, maximum-scale=1.0" }/
-    %meta{ :name => 'description', :content => 'Made in Amsterdam. A list of tech companies crafting products in Amsterdam.' }/
-    %meta{ :name => 'keywords', :content => 'Made in Amsterdam, amsterdam, tech, technology, products' }/
+    %meta{ :name => "description", :content => "Made in Amsterdam. A list of tech companies crafting products in Amsterdam." }/
+    %meta{ :name => "keywords", :content => "Made in Amsterdam, amsterdam, tech, technology, products" }/
 
-    = stylesheet_link_tag 'application'
-    = javascript_include_tag 'all'
-    = favicon_tag 'favicon.png'
-    %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' }
+    /[if IE]
+      = stylesheet_link_tag    "ie/ie", :media => "all"
+
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv.js"
+      = stylesheet_link_tag    "ie/ie8", :media => "all"
+
+    = favicon_tag "images/favicon.png"
+    = favicon_tag "images/apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed", :type => "image/png"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "all"
+    = javascript_include_tag "https://use.typekit.net/klt2kdx.js"
+    %script(type="text/javascript") try{Typekit.load();}catch(e){}
 
   %body
 
-    %header.wrap{ :role => 'banner' }
+    %header.wrap{ :role => "banner" }
       .container
-        %a.logo{ :href => '#' }
-          %img{}
+        %a.logo{ :href => "#" }
+          =image_tag "logo-mams.png"
           %strong
             Made in Amsterdam
 
@@ -29,138 +38,182 @@
             %li.active
               %a{ :href => "#" }
                 Home
-              %a{ :href => "#" }
-                Jobs
+            %li
               %a{ :href => "#" }
                 About
+            %li
               %a{ :href => "#" }
                 Join
+            %li
+              %a{ :href => "#" }
+                Twitter
 
     %header.wrap#page-title
       .container
         %h1
-          A list of tech companies crafting products in Amsterdam.
+          Companies passionately making products in Amsterdam.
 
-    %section#home{:role => 'main' }
+    %section#home{:role => "main" }
       .container
         %ol#company-list
           %li
-            %a{ :href => 'http://www.12active.com' }
-              12Active
+            %a{ :href => "http://www.12active.com" }
+              =image_tag "logo-12active.png"
+              %h2
+                12Active
           %li
-            %a{ :href => 'http://22tracks.com' }
-              22tracks
+            %a{ :href => "http://22tracks.com" }
+              =image_tag "logo-22tracks.png"
+              %h2
+                22tracks
           %li
-            %a{ :href => 'http://www.adgibbon.co' }
-              AdGibbon
+            %a{ :href => "http://www.adgibbon.co" }
+              =image_tag "logo-adgibbon.png"
+              %h2
+                AdGibbon
           %li
-            %a{ :href => 'http://bottlenose.com' }
-              Bottlenose
+            %a{ :href => "http://bottlenose.com" }
+              =image_tag "logo-bottlenose.png"
+              %h2
+                Bottlenose
           %li
-            %a{ :href => 'http://www.earlydoc.com' }
-              Earlydoc
+            %a{ :href => "http://www.ebuddy.com" }
+              =image_tag "logo-ebuddy.png"
+              %h2
+                eBuddy
           %li
-            %a{ :href => 'http://www.ebuddy.com' }
-              eBuddy
+            %a{ :href => "http://www.efaqt.com" }
+              =image_tag "logo-efaqt.png"
+              %h2
+                Efaqt
           %li
-            %a{ :href => 'http://www.efaqt.com' }
-              Efaqt
+            %a{ :href => "http://www.hyves.nl" }
+              =image_tag "logo-hyves.png"
+              %h2
+                Hyves
           %li
-            %a{ :href => 'http://favour.it' }
-              favour.it
+            %a{ :href => "http://www.yourkarma.com" }
+              =image_tag "logo-karma.png"
+              %h2
+                Karma
           %li
-            %a{ :href => 'https://fray.it' }
-              Frayit
+            %a{ :href => "http://www.layar.com" }
+              =image_tag "logo-layar.png"
+              %h2
+                Layar
           %li
-            %a{ :href => 'https://gratisprint.nl' }
-              GratisPrint.nl
+            %a{ :href => "http://www.mobypicture.com" }
+              =image_tag "logo-mobypicture.png"
+              %h2
+                Mobypicture
           %li
-            %a{ :href => 'http://www.hyves.nl' }
-              Hyves
+            %a{ :href => "http://www.olery.com" }
+              =image_tag "logo-olery.png"
+              %h2
+                Olery
           %li
-            %a{ :href => 'http://www.imbull.com' }
-              Imbull
+            %a{ :href => "http://www.mollie.nl" }
+              =image_tag "logo-mollie.png"
+              %h2
+                Mollie
           %li
-            %a{ :href => 'http://www.layar.com' }
-              Layar
+            %a{ :href => "http://app.partywithalocal.com" }
+              =image_tag "logo-partywithalocal.png"
+              %h2
+                Party with a Local
           %li
-            %a{ :href => 'http://www.mobypicture.com' }
-              Mobypicture
+            %a{ :href => "http://www.peecho.com" }
+              =image_tag "logo-peecho.png"
+              %h2
+                Peecho
           %li
-            %a{ :href => 'http://www.olery.com' }
-              Olery
+            %a{ :href => "http://www.perspagina.nl" }
+              =image_tag "logo-perspagina.png"
+              %h2
+                PersPagina
           %li
-            %a{ :href => 'http://www.mollie.nl' }
-              Mollie
+            %a{ :href => "http://pressdoc.com" }
+              =image_tag "logo-pressdoc.png"
+              %h2
+                Pressdoc
           %li
-            %a{ :href => 'http://app.partywithalocal.com' }
-              Party with a Local
+            %a{ :href => "http://readmo.re" }
+              =image_tag "logo-readmore.png"
+              %h2
+                Readmore
           %li
-            %a{ :href => 'http://paydro.net' }
-              Paydro
+            %a{ :href => "http://www.sellanapp.com" }
+              =image_tag "logo-sellanapp.png"
+              %h2
+                SellanApp
           %li
-            %a{ :href => 'http://www.peecho.com' }
-              Peecho
+            %a{ :href => "http://www.silkapp.com" }
+              =image_tag "logo-silkapp.png"
+              %h2
+                Silk
           %li
-            %a{ :href => 'http://www.perspagina.nl' }
-              PersPagina
+            %a{ :href => "http://skylin.es" }
+              =image_tag "logo-skylines.png"
+              %h2
+                Skylin.es
           %li
-            %a{ :href => 'http://pressdoc.com' }
-              Pressdoc
+            %a{ :href => "http://slideshots.com" }
+              =image_tag "logo-slideshots.png"
+              %h2
+                Slideshots
           %li
-            %a{ :href => 'http://readmo.re' }
-              Readmore
+            %a{ :href => "http://www.socialintern.com" }
+              =image_tag "logo-socialintern.png"
+              %h2
+                Social Intern
           %li
-            %a{ :href => 'http://www.sellanapp.com' }
-              SellanApp
+            %a{ :href => "http://www.springest.nl" }
+              =image_tag "logo-springest.png"
+              %h2
+                Springest
           %li
-            %a{ :href => 'http://www.silkapp.com' }
-              Silk
+            %a{ :href => "http://studenttutors.nl" }
+              =image_tag "logo-studenttutors.png"
+              %h2
+                StudentTutors
           %li
-            %a{ :href => 'http://skylin.es' }
-              Skylin.es
+            %a{ :href => "http://www.studyflow.nl" }
+              =image_tag "logo-studyflow.png"
+              %h2
+                StudyFlow
           %li
-            %a{ :href => 'http://slideshots.com' }
-              Slideshots
+            %a{ :href => "http://twittercounter.com" }
+              =image_tag "logo-twittercounter.png"
+              %h2
+                Twittercounter
           %li
-            %a{ :href => 'http://www.socialintern.com' }
-              Social Intern
+            %a{ :href => "http://usabilla.com" }
+              =image_tag "logo-usabilla.png"
+              %h2
+                Usabilla
           %li
-            %a{ :href => 'http://www.springest.nl' }
-              Springest
+            %a{ :href => "http://wakoopa.com" }
+              =image_tag "logo-wakoopa.png"
+              %h2
+                Wakoopa
           %li
-            %a{ :href => 'http://studenttutors.nl' }
-              StudentTutors
+            %a{ :href => "http://wappzapp.tv" }
+              =image_tag "logo-wappzapp.png"
+              %h2
+                wappZapp
           %li
-            %a{ :href => 'http://www.studyflow.nl' }
-              StudyFlow
+            %a{ :href => "https://www.wetransfer.com" }
+              =image_tag "logo-wetransfer.png"
+              %h2
+                Wetransfer
           %li
-            %a{ :href => 'http://www.studytube.nl' }
-              StudyTube
-          %li
-            %a{ :href => 'http://www.stuvia.nl' }
-              Stuvia
-          %li
-            %a{ :href => 'http://twittercounter.com' }
-              Twittercounter
-          %li
-            %a{ :href => 'http://usabilla.com' }
-              Usabilla
-          %li
-            %a{ :href => 'http://wakoopa.com' }
-              Wakoopa
-          %li
-            %a{ :href => 'http://wappzapp.tv' }
-              wappZapp
-          %li
-            %a{ :href => 'https://www.wetransfer.com' }
-              Wetransfer
-          %li
-            %a{ :href => 'http://zeker.com' }
-              Zeker.com
+            %a{ :href => "http://zeker.com" }
+              =image_tag "logo-zeker.png"
+              %h2
+                Zeker.com
 
     %footer
-      %a{ :href => '#' }
-        %img{ :src => 'images/logo-small-black.png' }
+      %a{ :href => "#" }
+        %img{ :src => "images/logo-small-black.png" }
       %p
         Made with love in Amsterdam
