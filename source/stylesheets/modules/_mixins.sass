@@ -1,26 +1,6 @@
 /* =Mixins
  ************************************************/
 
-/* =Sizes
- ************************************************/
-
-$f11:     .6875em
-$f12:     .75em
-$f13:     .8125em
-$f14:     .875em
-$f15:     .9375em
-$f16:     1em
-$f17:     1.0625em
-$f18:     1.125em
-$f22:     1.375em
-$f24:     1.5em
-
-/* =Colors
- ************************************************/
-
-$red:     #f52a0e
-$grey:    #17191a
-
 /* =Fonts
  ************************************************/
 
@@ -44,12 +24,10 @@ $grey:    #17191a
 =at2x($image_name, $w: auto, $h: auto, $extention: '.png')
   background-image: image-url($image_name + $extention)
   $x2img : $image_name + '@2x' + $extention
-  background-repeat: no-repeat
 
   @media all and (-webkit-min-device-pixel-ratio : 1.5)
     background-image: image-url($x2img)
     background-size: $w $h
-    background-repeat: no-repeat
 
 /* =Keyframes
  ************************************************/
