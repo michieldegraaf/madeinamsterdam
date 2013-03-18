@@ -156,17 +156,19 @@
         background: image-url('logo-bw-zeker.png') no-repeat left top
         background-size: cover
 
-/* Responsiveness */
+/* =Home responsiveness
+ ************************************************/
 
 @media (max-width: 940px)
   #company-list
     li
       width: 33%
 
-@media (max-width: 500px)
+/* =Mobile */
+
+@media (max-width: 499px)
   #company-list
-    padding-left: 20px
-    list-style-type: decimal
+    margin-top: 30px
     border: 0 none
 
     li
@@ -176,6 +178,7 @@
 
       a
         border: 0 none
+        padding: 5px 0
 
         img
           display: none

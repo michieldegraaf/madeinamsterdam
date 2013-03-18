@@ -12,8 +12,12 @@ h1
 hr
   border: 0 none
 
+p ol
+  list-style: decimal
+
 a
   text-decoration: none
+  color: #0d0d0d
   white-space: no-wrap
   +transition(all, .2s)
 
@@ -25,14 +29,37 @@ a
   width: 1000px
   margin: 0 auto
 
+.wrap
+  padding: 50px 0
+
+.wrap-small
+  max-width: 640px
+  margin: 0 auto
+  padding: 50px 0
+
+.center
+  text-align: center
+
 /* =Headers
  ************************************************/
 
 #page-title
-  padding: 40px 0
   text-align: center
   border-bottom: 1px solid #cfcfcf
 
-  h1
+  h1, a
+    display: inline-block
     font-size: $f22
-    font-style: italic
+
+  a
+    color: $red
+
+/* =Home responsiveness
+ ************************************************/
+
+/* =Mobile */
+
+@media (max-width: 499px)
+  .wrap,
+  .wrap-small
+    padding: 20px 0

@@ -1,0 +1,76 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %title Made in Amsterdam
+    %meta{ :charset => "utf-8" }/
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+    %meta{ :name => "viewport", :content => "width=device-width, minimum-scale=1.0, maximum-scale=1.0" }/
+    %meta{ :name => "description", :content => "Made in Amsterdam. A list of tech companies crafting products in Amsterdam." }/
+    %meta{ :name => "keywords", :content => "Made in Amsterdam, amsterdam, tech, technology, products" }/
+
+    /[if IE]
+      = stylesheet_link_tag    "ie/ie", :media => "all"
+
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv.js"
+      = stylesheet_link_tag    "ie/ie8", :media => "all"
+
+    = favicon_tag "images/favicon.png"
+    = favicon_tag "images/apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed", :type => "image/png"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "all"
+    = javascript_include_tag "https://use.typekit.net/klt2kdx.js"
+    %script(type="text/javascript") try{Typekit.load();}catch(e){}
+
+  %body
+
+    %header.wrap{ :role => "banner" }
+      .container
+        %a.logo{ :href => "#" }
+          =image_tag "logo-mams.png"
+          %strong
+            Made in Amsterdam
+
+        %hr
+
+        %nav.nav{ :role => "navigation" }
+          %ul
+            %li
+              %a{ :href => "index.html" }
+                Home
+            %li.active
+              %a{ :href => "#" }
+                About
+            %li
+              %a{ :href => "#" }
+                Twitter
+            %li
+              %a{ :href => "#" }
+                Facebook
+
+    %section#about{:role => "main" }
+      .container
+        .wrap-small
+          %header.title
+            %h1
+              Start-ups in Amsterdam
+          %p
+            Amsterdam is full of creative and tech savvy people making some really cool products. Our goal is to build a community around these people and products, Made in Amsterdam.
+          %p
+            The idea is pretty simple and the ambition is great. We hope to start facilitating meet-ups, talks and hack nights. But like any organisation we need your help.
+          %h2
+            Company requirements
+          %p
+            We take Made in Amsterdam pretty serious and with that come requirements. Not just anyone or any company can join the list. Companies need to meet the following requirements:
+          %ol
+            %li
+              The company must focus on building one or multiple products
+            %li
+              The company needs to have more than 4 (four) people working on the product
+
+    %footer.wrap.center
+      %a{ :href => "#" }
+        %img{ :src => "images/logo-small-black.png" }
+      %p
+        %strong
+          Made in Amstedam
