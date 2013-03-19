@@ -15,8 +15,8 @@
       = javascript_include_tag "html5shiv.js"
       = stylesheet_link_tag    "ie/ie8", :media => "all"
 
-    = favicon_tag "images/favicon.ico"
-    = favicon_tag "images/apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed", :type => "image/png"
+    = favicon_tag "favicon.ico"
+    = favicon_tag "apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed", :type => "image/png"
     = stylesheet_link_tag "application"
     = javascript_include_tag "all"
     = javascript_include_tag "https://use.typekit.net/klt2kdx.js"
@@ -36,7 +36,7 @@
         %nav.nav{ :role => "navigation" }
           %ul
             %li
-              %a{ :href => "index.html" }
+              %a{ :href => "/" }
                 Home
             %li.active
               %a{ :href => "#" }
