@@ -1,32 +1,8 @@
-/* =Mixins
- ************************************************/
-
-/* =Sizes
- ************************************************/
-
-$f11:     .6875em
-$f12:     .75em
-$f13:     .8125em
-$f14:     .875em
-$f15:     .9375em
-$f16:     1em
-$f17:     1.0625em
-$f18:     1.125em
-$f22:     1.375em
-$f24:     1.5em
-
-/* =Colors
- ************************************************/
-
-$red:     #f52a0e
-$grey:    #17191a
-
 /* =Fonts
  ************************************************/
 
 =futura
   font-family: "futura-pt", Futura Std, Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif
-  letter-spacing: 0.1em
 
 =futura-wide
   +futura
@@ -36,7 +12,8 @@ $grey:    #17191a
   letter-spacing: 0.3em
 
 =chaparral
-  font-family: "chaparral-pro-display", Chaparral Pro, Georgia, Times, serif
+  font-family: "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif
+  line-height: 120%
 
 /* =@2x converter
  ************************************************/
@@ -44,12 +21,10 @@ $grey:    #17191a
 =at2x($image_name, $w: auto, $h: auto, $extention: '.png')
   background-image: image-url($image_name + $extention)
   $x2img : $image_name + '@2x' + $extention
-  background-repeat: no-repeat
 
   @media all and (-webkit-min-device-pixel-ratio : 1.5)
     background-image: image-url($x2img)
     background-size: $w $h
-    background-repeat: no-repeat
 
 /* =Keyframes
  ************************************************/
@@ -58,8 +33,6 @@ $grey:    #17191a
   @-webkit-keyframes #{$name}
     @content
   @-moz-keyframes #{$name}
-    @content
-  @-ms-keyframes #{$name}
     @content
   @keyframes #{$name}
     @content

@@ -27,7 +27,7 @@
     %header.wrap{ :role => "banner" }
       .container
         %a.logo{ :href => "#" }
-          =image_tag "logo-mams.png"
+          =image_tag "logo-mams@2x.png"
           %strong
             Made in Amsterdam
 
@@ -39,181 +39,186 @@
               %a{ :href => "#" }
                 Home
             %li
-              %a{ :href => "#" }
+              %a{ :href => "about.html" }
                 About
             %li
-              %a{ :href => "#" }
-                Join
-            %li
-              %a{ :href => "#" }
+              %a{ :href => "https://twitter.com/madeinamsterdam" }
                 Twitter
+            %li
+              %a{ :href => "https://www.facebook.com/pages/Made-in-Amsterdam" }
+                Facebook
 
     %header.wrap#page-title
       .container
         %h1
-          Companies passionately making products in Amsterdam.
+          Startups passionately crafting products in Amsterdam.
+        %a{ :href => "mailto:info@madeinamsterd.am?subject=My company [name] wants to join Made in Amsterdam&body=Do not forget to attach a vector file (.ai or .eps) of your logo." }
+          Join the list
 
     %section#home{:role => "main" }
       .container
-        %ol#company-list
+        %ul#company-list
           %li
-            %a{ :href => "http://www.12active.com" }
+            %a#twelveactive{ :href => "http://www.12active.com" }
               =image_tag "logo-12active.png"
               %h2
                 12Active
           %li
-            %a{ :href => "http://22tracks.com" }
+            %a#twentytwotracks{ :href => "http://22tracks.com" }
               =image_tag "logo-22tracks.png"
               %h2
                 22tracks
           %li
-            %a{ :href => "http://www.adgibbon.co" }
+            %a#adgibbon{ :href => "http://www.adgibbon.com" }
               =image_tag "logo-adgibbon.png"
               %h2
                 AdGibbon
           %li
-            %a{ :href => "http://bottlenose.com" }
+            %a#bottlenose{ :href => "http://bottlenose.com" }
               =image_tag "logo-bottlenose.png"
               %h2
                 Bottlenose
           %li
-            %a{ :href => "http://www.ebuddy.com" }
+            %a#ebuddy{ :href => "http://www.ebuddy.com" }
               =image_tag "logo-ebuddy.png"
               %h2
                 eBuddy
           %li
-            %a{ :href => "http://www.efaqt.com" }
+            %a#efaqt{ :href => "http://www.efaqt.com" }
               =image_tag "logo-efaqt.png"
               %h2
                 Efaqt
           %li
-            %a{ :href => "http://www.hyves.nl" }
+            %a#hyves{ :href => "http://www.hyves.nl" }
               =image_tag "logo-hyves.png"
               %h2
                 Hyves
           %li
-            %a{ :href => "http://www.yourkarma.com" }
+            %a#karma{ :href => "http://www.yourkarma.com" }
               =image_tag "logo-karma.png"
               %h2
                 Karma
           %li
-            %a{ :href => "http://www.layar.com" }
+            %a#layar{ :href => "http://www.layar.com" }
               =image_tag "logo-layar.png"
               %h2
                 Layar
           %li
-            %a{ :href => "http://www.mobypicture.com" }
+            %a#mobypicture{ :href => "http://www.mobypicture.com" }
               =image_tag "logo-mobypicture.png"
               %h2
                 Mobypicture
           %li
-            %a{ :href => "http://www.olery.com" }
+            %a#olery{ :href => "http://www.olery.com" }
               =image_tag "logo-olery.png"
               %h2
                 Olery
           %li
-            %a{ :href => "http://www.mollie.nl" }
+            %a#mollie{ :href => "http://www.mollie.nl" }
               =image_tag "logo-mollie.png"
               %h2
                 Mollie
           %li
-            %a{ :href => "http://app.partywithalocal.com" }
+            %a#partywithalocal{ :href => "http://app.partywithalocal.com" }
               =image_tag "logo-partywithalocal.png"
               %h2
                 Party with a Local
           %li
-            %a{ :href => "http://www.peecho.com" }
+            %a#peecho{ :href => "http://www.peecho.com" }
               =image_tag "logo-peecho.png"
               %h2
                 Peecho
           %li
-            %a{ :href => "http://www.perspagina.nl" }
+            %a#perspagina{ :href => "http://www.perspagina.nl" }
               =image_tag "logo-perspagina.png"
               %h2
                 PersPagina
           %li
-            %a{ :href => "http://pressdoc.com" }
+            %a#pressdoc{ :href => "http://pressdoc.com" }
               =image_tag "logo-pressdoc.png"
               %h2
                 Pressdoc
           %li
-            %a{ :href => "http://readmo.re" }
+            %a#readmore{ :href => "http://readmo.re" }
               =image_tag "logo-readmore.png"
               %h2
                 Readmore
           %li
-            %a{ :href => "http://www.sellanapp.com" }
+            %a#sellanapp{ :href => "http://www.sellanapp.com" }
               =image_tag "logo-sellanapp.png"
               %h2
                 SellanApp
           %li
-            %a{ :href => "http://www.silkapp.com" }
+            %a#silkapp{ :href => "http://www.silkapp.com" }
               =image_tag "logo-silkapp.png"
               %h2
                 Silk
           %li
-            %a{ :href => "http://skylin.es" }
+            %a#skylines{ :href => "http://skylin.es" }
               =image_tag "logo-skylines.png"
               %h2
                 Skylin.es
           %li
-            %a{ :href => "http://slideshots.com" }
+            %a#slideshots{ :href => "http://slideshots.com" }
               =image_tag "logo-slideshots.png"
               %h2
                 Slideshots
           %li
-            %a{ :href => "http://www.socialintern.com" }
+            %a#socialintern{ :href => "http://www.socialintern.com" }
               =image_tag "logo-socialintern.png"
               %h2
                 Social Intern
           %li
-            %a{ :href => "http://www.springest.nl" }
+            %a#springest{ :href => "http://www.springest.nl" }
               =image_tag "logo-springest.png"
               %h2
                 Springest
           %li
-            %a{ :href => "http://studenttutors.nl" }
+            %a#studenttutors{ :href => "http://studenttutors.nl" }
               =image_tag "logo-studenttutors.png"
               %h2
                 StudentTutors
           %li
-            %a{ :href => "http://www.studyflow.nl" }
+            %a#studyflow{ :href => "http://www.studyflow.nl" }
               =image_tag "logo-studyflow.png"
               %h2
                 StudyFlow
           %li
-            %a{ :href => "http://twittercounter.com" }
+            %a#twittercounter{ :href => "http://twittercounter.com" }
               =image_tag "logo-twittercounter.png"
               %h2
                 Twittercounter
           %li
-            %a{ :href => "http://usabilla.com" }
+            %a#usabilla{ :href => "http://usabilla.com" }
               =image_tag "logo-usabilla.png"
               %h2
                 Usabilla
           %li
-            %a{ :href => "http://wakoopa.com" }
+            %a#wakoopa{ :href => "http://wakoopa.com" }
               =image_tag "logo-wakoopa.png"
               %h2
                 Wakoopa
           %li
-            %a{ :href => "http://wappzapp.tv" }
+            %a#wappzapp{ :href => "http://wappzapp.tv" }
               =image_tag "logo-wappzapp.png"
               %h2
                 wappZapp
           %li
-            %a{ :href => "https://www.wetransfer.com" }
+            %a#wetransfer{ :href => "https://www.wetransfer.com" }
               =image_tag "logo-wetransfer.png"
               %h2
                 Wetransfer
           %li
-            %a{ :href => "http://zeker.com" }
+            %a#zeker{ :href => "http://zeker.com" }
               =image_tag "logo-zeker.png"
               %h2
                 Zeker.com
 
-    %footer
+    %footer.center{ :role => "footer" }
       %a{ :href => "#" }
-        %img{ :src => "images/logo-small-black.png" }
+        %img{ :src => "images/logo-mams-small-black@2x.png" }
       %p
-        Made with love in Amsterdam
+        %strong
+          Made in Amsterdam
+        %em
+          Je Maintiendrai.

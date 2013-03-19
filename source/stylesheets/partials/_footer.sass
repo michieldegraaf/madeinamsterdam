@@ -1,1 +1,38 @@
-/* Footer */
+/* =Footer
+ ************************************************/
+
+footer[role="footer"]
+  margin-top: 80px
+  padding: 50px 0
+  background: #f2eae4
+
+  a
+    display: inline-block
+
+    img
+      display: block
+      width: auto
+      height: 48px
+
+  p
+    margin-top: 10px
+
+    strong
+      display: block
+      margin-bottom: 10px
+      +futura-wide
+      font-size: $f13
+
+/* =Footer responsiveness
+ ************************************************/
+
+/* =Mobile */
+
+@media (max-width: 499px)
+  footer[role="footer"]
+    margin-top: 40px
+    padding: 30px 0
+
+    a
+      img
+        height: 36px
