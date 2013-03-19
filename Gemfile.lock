@@ -87,6 +87,8 @@ GEM
       i18n (~> 0.6)
       padrino-core (= 0.10.6)
     rack (1.3.6)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-protection (1.2.0)
       rack
     rack-test (0.6.1)
@@ -132,4 +134,5 @@ DEPENDENCIES
   heroku
   middleman
   middleman-smusher
+  rack-contrib
   thin
