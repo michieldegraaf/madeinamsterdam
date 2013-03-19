@@ -1,5 +1,9 @@
-source :rubygems
+source "https://rubygems.org"
 
 gem 'middleman'
 gem 'middleman-smusher'
-gem 'rb-fsevent'
+gem 'thin'
+
+group :development do
+  gem 'heroku'
+end
