@@ -16,4 +16,4 @@
 
     Last update: Daily
     Doctype: HTML5
-    Software: Ruby, Middleman, Sublime Text 2, VIM, Photoshop, GitHub, Git, HAML, Sass, Compass
+    Software: Ruby, Sinatra, Sublime Text 2, VIM, Photoshop, GitHub, Git, HAML, Sass, Compass
