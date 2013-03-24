@@ -71,8 +71,26 @@
               The company must be registered with the Chamber of Commerce
           %p
             Send us some information about your company and include your logo in vector (.ai or .eps).
-            %a{ :href => "mailto:info@madeinamsterd.am?subject=My company [name] wants to join Made in Amsterdam&body=Do not forget to attach a vector file (.ai or .eps) of your logo." }
-              Join Made in Amsterdam
+            %form#ApplicationForm{:action => "/", :enctype => "application/x-www-form-urlencoded", :method => "post"}
+              %p#ApplicationForm_error.message{:style => "display: none"}
+              %fieldset
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_CompanyName"} Company Name
+                  .middleColumn
+                    %input#ApplicationForm_CompanyName.text{:name => "CompanyName", :type => "text"}/
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_CompanyWebsite"} Company Website
+                  .middleColumn
+                    %input#ApplicationForm_CompanyWebsite.text{:name => "CompanyWebsite", :type => "text"}/
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_Name"} Your name
+                  .middleColumn
+                    %input#ApplicationForm_Name.text{:name => "Name", :type => "text"}/
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_Email"} Your email address
+                  .middleColumn
+                    %input#ApplicationForm_Email.text{:name => "Email", :type => "email"}/
+                %input.send{:type => "submit", :value => "Send"}/
 
     %footer.center{ :role => "footer" }
       %a{ :href => "#" }
