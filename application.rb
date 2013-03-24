@@ -28,7 +28,7 @@ post '/about.html' do
   @mailconfig = {
     :to => 'info@madeinamserd.am',
     :from => 'no-reply@madeinamsterd.am',
-    :subject => "[Made in Amsterdam ]New application",
+    :subject => "[Made in Amsterdam] New application",
     :body => "Company name: #{params[:ApplicationForm_CompanyName]} \nCompany website: #{params[:ApplicationForm_CompanyWebsite]} \n \nName: #{params[:ApplicationForm_Name]} \nEmail: #{params[:ApplicationForm_Email]}",
     :via => :smtp,
     :via_options => {
