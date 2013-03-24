@@ -1,0 +1,19 @@
+/* TEAM */
+
+    Stefan Borsje
+    Twitter: @sborsje
+    From: Amsterdam, NL
+
+    Michiel de Graaf
+    Twitter: @graafdemichiel
+    From: Amsterdam, NL
+
+    Mick Niepoth
+    Twitter: @mickniepoth
+    From: Amsterdam, NL
+
+/* SITE */
+
+    Last update: Daily
+    Doctype: HTML5
+    Software: Ruby, Middleman, Sublime Text 2, VIM, Photoshop, GitHub, Git, HAML, Sass, Compass
