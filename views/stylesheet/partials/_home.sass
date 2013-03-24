@@ -1,0 +1,196 @@
+/* =Home
+ ************************************************/
+
+#company-list
+  overflow: hidden
+  border-left: 1px solid #ddd
+
+  li
+    display: block
+    float: left
+    width: 25%
+
+    a
+      display: block
+      border-bottom: 1px solid #ddd
+      border-right: 1px solid #ddd
+      +opacity(.7)
+
+      &:hover
+        +opacity(1)
+
+        img
+          +opacity(1)
+
+      img
+        display: block
+        width: 100%
+        height: auto
+        +opacity(0)
+        +transition(opacity, .25s)
+
+      h2
+        display: none
+
+      &#twelveactive
+        background: image-url('logo-bw-12active.png') no-repeat left top
+        background-size: cover
+
+      &#twentytwotracks
+        background: image-url('logo-bw-22tracks.png') no-repeat left top
+        background-size: cover
+
+      &#adgibbon
+        background: image-url('logo-bw-adgibbon.png') no-repeat left top
+        background-size: cover
+
+      &#bottlenose
+        background: image-url('logo-bw-bottlenose.png') no-repeat left top
+        background-size: cover
+
+      &#ebuddy
+        background: image-url('logo-bw-ebuddy.png') no-repeat left top
+        background-size: cover
+
+      &#efaqt
+        background: image-url('logo-bw-efaqt.png') no-repeat left top
+        background-size: cover
+
+      &#hyves
+        background: image-url('logo-bw-hyves.png') no-repeat left top
+        background-size: cover
+
+      &#karma
+        background: image-url('logo-bw-karma.png') no-repeat left top
+        background-size: cover
+
+      &#layar
+        background: image-url('logo-bw-layar.png') no-repeat left top
+        background-size: cover
+
+      &#mobypicture
+        background: image-url('logo-bw-mobypicture.png') no-repeat left top
+        background-size: cover
+
+      &#olery
+        background: image-url('logo-bw-olery.png') no-repeat left top
+        background-size: cover
+
+      &#mollie
+        background: image-url('logo-bw-mollie.png') no-repeat left top
+        background-size: cover
+
+      &#partywithalocal
+        background: image-url('logo-bw-partywithalocal.png') no-repeat left top
+        background-size: cover
+
+      &#peecho
+        background: image-url('logo-bw-peecho.png') no-repeat left top
+        background-size: cover
+
+      &#perspagina
+        background: image-url('logo-bw-perspagina.png') no-repeat left top
+        background-size: cover
+
+      &#pressdoc
+        background: image-url('logo-bw-pressdoc.png') no-repeat left top
+        background-size: cover
+
+      &#readmore
+        background: image-url('logo-bw-readmore.png') no-repeat left top
+        background-size: cover
+
+      &#sellanapp
+        background: image-url('logo-bw-sellanapp.png') no-repeat left top
+        background-size: cover
+
+      &#silkapp
+        background: image-url('logo-bw-silkapp.png') no-repeat left top
+        background-size: cover
+
+      &#skylines
+        background: image-url('logo-bw-skylines.png') no-repeat left top
+        background-size: cover
+
+      &#slideshots
+        background: image-url('logo-bw-slideshots.png') no-repeat left top
+        background-size: cover
+
+      &#socialintern
+        background: image-url('logo-bw-socialintern.png') no-repeat left top
+        background-size: cover
+
+      &#springest
+        background: image-url('logo-bw-springest.png') no-repeat left top
+        background-size: cover
+
+      &#studenttutors
+        background: image-url('logo-bw-studenttutors.png') no-repeat left top
+        background-size: cover
+
+      &#studyflow
+        background: image-url('logo-bw-studyflow.png') no-repeat left top
+        background-size: cover
+
+      &#twittercounter
+        background: image-url('logo-bw-twittercounter.png') no-repeat left top
+        background-size: cover
+
+      &#usabilla
+        background: image-url('logo-bw-usabilla.png') no-repeat left top
+        background-size: cover
+
+      &#wakoopa
+        background: image-url('logo-bw-wakoopa.png') no-repeat left top
+        background-size: cover
+
+      &#wappzapp
+        background: image-url('logo-bw-wappzapp.png') no-repeat left top
+        background-size: cover
+
+      &#wetransfer
+        background: image-url('logo-bw-wetransfer.png') no-repeat left top
+        background-size: cover
+
+      &#zeker
+        background: image-url('logo-bw-zeker.png') no-repeat left top
+        background-size: cover
+
+/* =Home responsiveness
+ ************************************************/
+
+@media (max-width: 940px)
+  #company-list
+    li
+      width: 33%
+
+/* =Mobile */
+
+@media (max-width: 499px)
+  #company-list
+    margin-top: 20px
+    border: 0 none
+
+    li
+      float: none
+      width: 100%
+      margin-top: 10px
+      text-align: center
+
+      a
+        border: 0 none
+        padding: 5px 0
+        +opacity(1)
+        background: none !important
+
+        img
+          display: none
+
+        h2
+          font-size: 120%
+          display: inline-block
+          border-bottom: 1px solid lighten($red, 30%)
+
+        &:hover
+          h2
+            border-color: $red

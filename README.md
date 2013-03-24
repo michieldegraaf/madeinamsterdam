@@ -1,3 +1,9 @@
 # Made in Amsterdam
 
-Middleman starts standing watch on port 4567 after running "bundle exec middleman server".
+To run this locally:
+```
+$ gem install bundler
+$ bundle
+$ RACK_ENV=development bundle exec foreman start
+```
+You can now access the website on http://localhost:5000

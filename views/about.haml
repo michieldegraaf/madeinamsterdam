@@ -1,0 +1,120 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %title Made in Amsterdam
+    %meta{ :charset => "utf-8" }/
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+    %meta{ :name => "viewport", :content => "width=device-width, minimum-scale=1.0, maximum-scale=1.0" }/
+    %meta{ :name => "description", :content => "Made in Amsterdam. A list of tech companies crafting products in Amsterdam." }/
+    %meta{ :name => "keywords", :content => "Made in Amsterdam, amsterdam, tech, technology, products" }/
+
+    /[if IE]
+      = stylesheet_link_tag    "ie/ie", :media => "all"
+
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv.js"
+      = stylesheet_link_tag    "ie/ie8", :media => "all"
+
+    = link_favicon_tag "favicon.ico"
+    = link_favicon_tag "apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed", :type => "image/png"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "all"
+    = javascript_include_tag "https://use.typekit.net/klt2kdx.js"
+    %script(type="text/javascript") try{Typekit.load();}catch(e){}
+
+  %body
+
+    %header.wrap{ :role => "banner" }
+      .container
+        %a.logo{ :href => "#" }
+          =image_tag "images/logo-mams@2x.png"
+          %strong
+            Made in Amsterdam
+
+        %hr
+
+        %nav.nav{ :role => "navigation" }
+          %ul
+            %li
+              %a{ :href => "/" }
+                Home
+            %li.active
+              %a{ :href => "#" }
+                About
+            %li
+              %a{ :href => "https://twitter.com/madeinamsterdam" }
+                Twitter
+            %li
+              %a{ :href => "https://www.facebook.com/pages/Made-in-Amsterdam" }
+                Facebook
+
+    %section#about{:role => "main" }
+      .container
+        .wrap-small.content
+          %h1
+            %span
+              Startups Made in Amsterdam
+          %p
+            The captial of the Netherlands, Amsterdam houses some industry leading and succesfull startups. Made in Amsterdam's goal is to list these companies.
+          %p
+            The idea is pretty simple and we hope to expand quickly and do some pretty cool stuff in the near future.
+          %h2
+            Company requirements
+          %p
+            To join Made in Amsterdam companies must meet the following requirements:
+          %ol
+            %li
+              The company is based in Amsterdam
+            %li
+              The company's main focus is building products (not client work)
+            %li
+              The company must be registered with the Chamber of Commerce
+          %p
+            Send us some information about your company and include your logo in vector (.ai or .eps).
+          - if !@sent == true
+            - if !@errorMessage.nil?
+              .error-messages
+                = @errorMessage
+            %form#ApplicationForm{:action => "/", :enctype => "multipart/form-data", :method => "post"}
+              %p#ApplicationForm_error.message{:style => "display: none"}
+              %fieldset
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_CompanyName"} Company Name
+                  .middleColumn
+                    %input#ApplicationForm_CompanyName.text{:name => "CompanyName", :type => "text"}/
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_CompanyWebsite"} Company Website
+                  .middleColumn
+                    %input#ApplicationForm_CompanyWebsite.text{:name => "CompanyWebsite", :type => "text"}/
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_Name"} Your name
+                  .middleColumn
+                    %input#ApplicationForm_Name.text{:name => "Name", :type => "text"}/
+                #email.field.text
+                  %label.left{:for => "ApplicationForm_Email"} Your email address
+                  .middleColumn
+                    %input#ApplicationForm_Email.text{:name => "Email", :type => "email"}/
+                %input.send{:type => "submit", :value => "Send"}/
+          - else
+            %em
+              Thank you for your application! We'll get back to you as soon as possible.
+
+    %footer.center{ :role => "footer" }
+      %a{ :href => "#" }
+        %img{ :src => "images/logo-mams-small-black@2x.png" }
+      %p
+        %strong
+          Made in Amsterdam
+        %em
+          Je Maintiendrai.
+
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39438029-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();

@@ -1,0 +1,38 @@
+/* =Fonts
+ ************************************************/
+
+=futura
+  font-family: "futura-pt", Futura Std, Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif
+
+=futura-wide
+  +futura
+  font-size: 13px
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: 0.3em
+
+=chaparral
+  font-family: "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif
+  line-height: 120%
+
+/* =@2x converter
+ ************************************************/
+
+=at2x($image_name, $w: auto, $h: auto, $extention: '.png')
+  background-image: image-url($image_name + $extention)
+  $x2img : $image_name + '@2x' + $extention
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5)
+    background-image: image-url($x2img)
+    background-size: $w $h
+
+/* =Keyframes
+ ************************************************/
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
