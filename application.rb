@@ -26,7 +26,7 @@ post '/about.html' do
   require 'pony'
 
   @mailconfig = {
-    :to => 'info@mickniepoth.com',
+    :to => 'info@madeinamserd.am',
     :from => 'no-reply@madeinamsterd.am',
     :subject => "[Made in Amsterdam ]New application",
     :body => "Company name: #{params[:ApplicationForm_CompanyName]} \nCompany website: #{params[:ApplicationForm_CompanyWebsite]} \n \nName: #{params[:ApplicationForm_Name]} \nEmail: #{params[:ApplicationForm_Email]}",
@@ -34,8 +34,8 @@ post '/about.html' do
     :via_options => {
       :port =>           '587',
       :address =>        'smtp.mandrillapp.com',
-      :user_name =>      'app13931583@heroku.com',
-      :password =>       'UqdfoTDkhH5arpcsFOUK1Q',
+      :user_name =>      ENV["MANDRILL_USERNAME"],
+      :password =>       ENV["MANDRILL_APIKEY"],
       :domain =>         'heroku.com',
       :authentication => :plain
     }
