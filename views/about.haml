@@ -78,24 +78,24 @@
             %form#ApplicationForm{:action => "/about.html", :enctype => "multipart/form-data", :method => "post"}
               %p#ApplicationForm_error.message{:style => "display: none"}
               %fieldset
-                #email.field.text
-                  %label.left{:for => "ApplicationForm_CompanyName"} Company Name
+                .field.text
+                  %label.left{:for => "company_name"} Company Name
                   .middleColumn
-                    %input#ApplicationForm_CompanyName.text{:name => "CompanyName", :type => "text"}/
-                #email.field.text
-                  %label.left{:for => "ApplicationForm_CompanyWebsite"} Company Website
+                    %input#ApplicationForm_CompanyName.text{:name => "company_name", :type => "text"}/
+                .field.text
+                  %label.left{:for => "company_website"} Company Website
                   .middleColumn
-                    %input#ApplicationForm_CompanyWebsite.text{:name => "CompanyWebsite", :type => "text"}/
-                #email.field.text
-                  %label.left{:for => "ApplicationForm_Name"} Your name
+                    %input#ApplicationForm_CompanyWebsite.text{:name => "company_website", :type => "text"}/
+                .field.text
+                  %label.left{:for => "name"} Your name
                   .middleColumn
-                    %input#ApplicationForm_Name.text{:name => "Name", :type => "text"}/
-                #email.field.text
-                  %label.left{:for => "ApplicationForm_Email"} Your email address
+                    %input#ApplicationForm_Name.text{:name => "name", :type => "text"}/
+                .field.text
+                  %label.left{:for => "email"} Your email address
                   .middleColumn
-                    %input#ApplicationForm_Email.text{:name => "Email", :type => "email"}/
-                #email.field.text
-                  %label.left{:for => "logo-upload"} Your logo (.ai or .eps)
+                    %input#ApplicationForm_Email.text{:name => "email", :type => "email"}/
+                .field.text
+                  %label.left{:for => "logo"} Your logo (.ai or .eps)
                   .middleColumn
                     %input#logo.logo{:name => "logo", :type => "file"}/
                 %input.send{:type => "submit", :value => "Send"}/
