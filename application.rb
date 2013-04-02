@@ -23,7 +23,29 @@ end
 
 post '/about.html' do
 
-  require 'pony'
+
+
+
+
+
+  unless params[:logo] &&
+         (tmpfile = params[:logo][:tempfile]) &&
+         (name = params[:logo][:filename])
+    @error = "No file selected"
+    return haml(:upload)
+  end
+  STDERR.puts "Uploading file, original name #{name.inspect}"
+  while blk = tmpfile.read(65536)
+    # here you would write it to its final location
+    STDERR.puts blk.inspect
+  end
+
+
+
+
+
+
+
 
   @mailconfig = {
     :to => 'info@madeinamserd.am',
@@ -47,7 +69,7 @@ post '/about.html' do
     @mailconfig[:attachments] = { name => tmpfile.read() }
   end
 
-  Pony.mail(@mailconfig)
+  # Pony.mail(@mailconfig)
 
   # if company_name.nil? || company_website.nil? || name.nil? || email.nil? || filename.nil?
   # @errorMessage   = "Error"
@@ -55,3 +77,9 @@ post '/about.html' do
 
   haml :about
 end
+
+
+
+
+
+
