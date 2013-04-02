@@ -75,7 +75,7 @@
             - if !@errorMessage.nil?
               .error-messages
                 = @errorMessage
-            %form#ApplicationForm{:action => "/", :enctype => "multipart/form-data", :method => "post"}
+            %form#ApplicationForm{:action => "/about.html", :enctype => "multipart/form-data", :method => "post"}
               %p#ApplicationForm_error.message{:style => "display: none"}
               %fieldset
                 #email.field.text
@@ -94,6 +94,10 @@
                   %label.left{:for => "ApplicationForm_Email"} Your email address
                   .middleColumn
                     %input#ApplicationForm_Email.text{:name => "Email", :type => "email"}/
+                #email.field.text
+                  %label.left{:for => "logo-upload"} Your logo (.ai or .eps)
+                  .middleColumn
+                    %input#logo.logo{:name => "logo", :type => "file"}/
                 %input.send{:type => "submit", :value => "Send"}/
           - else
             %em
