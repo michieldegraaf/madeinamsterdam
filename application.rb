@@ -3,6 +3,8 @@ require 'sinatra/static_assets'
 require 'compass'
 require 'pony'
 
+# set :show_exceptions, true
+
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
@@ -22,64 +24,30 @@ get '/about.html' do
 end
 
 post '/about.html' do
-
-
-
-
-
-
-  unless params[:logo] &&
-         (tmpfile = params[:logo][:tempfile]) &&
-         (name = params[:logo][:filename])
-    @error = "No file selected"
-    return haml(:upload)
-  end
-  STDERR.puts "Uploading file, original name #{name.inspect}"
-  while blk = tmpfile.read(65536)
-    # here you would write it to its final location
-    STDERR.puts blk.inspect
-  end
-
-
-
-
-
-
-
-
-  @mailconfig = {
-    :to => 'info@madeinamserd.am',
-    :from => 'no-reply@madeinamsterd.am',
-    :subject => "[Made in Amsterdam] New application",
-    :body => "Company name: #{params[:ApplicationForm_CompanyName]} \nCompany website: #{params[:ApplicationForm_CompanyWebsite]} \n \nName: #{params[:ApplicationForm_Name]} \nEmail: #{params[:ApplicationForm_Email]}",
-    :via => :smtp,
-    :via_options => {
-      :port =>           '587',
-      :address =>        'smtp.mandrillapp.com',
-      :user_name =>      ENV["MANDRILL_USERNAME"],
-      :password =>       ENV["MANDRILL_APIKEY"],
-      :domain =>         'heroku.com',
-      :authentication => :plain
+  if params[:company_name].nil? || params[:company_website].nil? || params[:name].nil? || params[:email].nil? || params[:logo].nil?
+    @errorMessage   = "Please fil in all fields."
+  else
+    @mailconfig = {
+      :to => 'info@madeinamsterd.am',
+      :from => 'no-reply@madeinamsterd.am',
+      :subject => '[Made in Amsterdam] New application',
+      :body => "Company name: #{params[:company_name]} \nCompany website: #{params[:company_website]} \n \nName: #{params[:name]} \nEmail: #{params[:email]}",
+      :via => :smtp,
+      :via_options => {
+        :port =>           '587',
+        :address =>        'smtp.mandrillapp.com',
+        :user_name =>      ENV["MANDRILL_USERNAME"],
+        :password =>       ENV["MANDRILL_APIKEY"],
+        :domain =>         'heroku.com',
+        :authentication => :plain
+      }
     }
-  }
-
-  if params[:logo] &&
-      (tmpfile = params[:logo][:tempfile]) &&
-      (name = params[:logo][:filename])
-    @mailconfig[:attachments] = { name => tmpfile.read() }
+    if params[:logo] &&
+        (tmpfile = params[:logo][:tempfile]) &&
+        (name = params[:logo][:filename])
+      @mailconfig[:attachments] = { name => tmpfile.read() }
+    end
+    Pony.mail(@mailconfig)
   end
-
-  # Pony.mail(@mailconfig)
-
-  # if company_name.nil? || company_website.nil? || name.nil? || email.nil? || filename.nil?
-  # @errorMessage   = "Error"
-  #end
-
   haml :about
 end
-
-
-
-
-
-
