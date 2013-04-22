@@ -31,7 +31,7 @@
           %strong
             Made in Amsterdam
 
-        %hr
+        %hr.mams-border
 
         %nav.nav{ :role => "navigation" }
           %ul
@@ -55,9 +55,7 @@
             %span
               Startups Made in Amsterdam
           %p
-            The captial of the Netherlands, Amsterdam houses some industry leading and succesfull startups. Made in Amsterdam's goal is to list these companies.
-          %p
-            The idea is pretty simple and we hope to expand quickly and do some pretty cool stuff in the near future.
+            The captial of the Netherlands, Amsterdam is the home of many start-ups. Made in Amsterdam's goal is to list these companies and make them easily accessible.
           %h2
             Company requirements
           %p
@@ -98,7 +96,9 @@
                   %label.left{:for => "logo"} Your logo (.ai or .eps)
                   .middleColumn
                     %input#logo.logo{:name => "logo", :type => "file"}/
-                %input.send{:type => "submit", :value => "Send"}/
+                .center
+                  %hr.mams-border
+                  %input.send.btn{:type => "submit", :value => "Join the list"}/
           - else
             %em
               Thank you for your application! We'll get back to you as soon as possible.
