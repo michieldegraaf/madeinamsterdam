@@ -40,7 +40,7 @@
                 Home
             %li.active
               %a{ :href => "#" }
-                About
+                Join
             %li
               %a{ :href => "https://twitter.com/madeinamsterdam" }
                 Twitter
@@ -52,12 +52,7 @@
       .container
         .wrap-small.content
           %h1
-            %span
-              Startups Made in Amsterdam
-          %p
-            The captial of the Netherlands, Amsterdam is the home of many start-ups. Made in Amsterdam's goal is to list these companies and make them easily accessible.
-          %h2
-            Company requirements
+            Join the list
           %p
             To join Made in Amsterdam companies must meet the following requirements:
           %ol
@@ -69,6 +64,7 @@
               The company must be registered with the Chamber of Commerce
           %p
             Send us some information about your company and include your logo in vector (.ai or .eps).
+
           - if !@sent == true
             - if !@errorMessage.nil?
               .error-messages
@@ -97,11 +93,11 @@
                   .middleColumn
                     %input#logo.logo{:name => "logo", :type => "file"}/
                 .center
-                  %hr.mams-border
-                  %input.send.btn{:type => "submit", :value => "Join the list"}/
+                  %hr.mams-border.grey
+                  %input.send.btn{:type => "submit", :value => "Apply now"}/
           - else
             %em
-              Thank you for your application! We'll get back to you as soon as possible.
+              Thank you for your application, you'll hear from us soon.
 
     %footer.center{ :role => "footer" }
       %a{ :href => "#" }
