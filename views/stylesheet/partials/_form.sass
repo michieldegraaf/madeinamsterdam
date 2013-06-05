@@ -35,31 +35,27 @@ form input
     padding: 10px
     +chaparral
     font-size: $f18
-    background: rgba(255,255,255,.9)
+    border: 2px solid rgba(0,0,0,.1)
     +border-radius(2px)
 
     &:focus
-      background: #fff
+      border-color: #92c3a1
 
   &.logo
     margin-top: 16px
 
 .error-messages
-  color: #b94a48
-  padding: 10px
+  margin-top: 10px
+  color: $red
+  font-size: $f20
 
 /* =Application form
  ************************************************/
 
 #ApplicationForm
   margin-top: 40px
-  padding: 30px
-  color: #fff
-  background-color: $grey
-  +at2x(bg-pattern-ribbon, 200px, 200px)
-  background-repeat: repeat
-  background-position: center center
-  +border-radius(3px)
+  padding-top: 40px
+  border-top: 2px solid rgba(0,0,0,.1)
 
   .mams-border
     width: 60%
